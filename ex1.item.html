@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="icon" href="../030320 item/giff/carrinho icon.gif">
+    <style>
+        #grupo {
+            color: red;
+            background-image: image();
+        }
+        icon
+        body{
+            background-image:url(https://media.giphy.com/media/H7losgaT18nm5cwDjj/giphy.gif);
+            
+        }
+    </style>
+</head>
+<body>
+    <ol id="grupo">
+        <!-- <li class="item">item 1</li>
+        <li class="item">item 2</li> -->
+    
+    </ol>
+    <button id="adicionar" onclick="adicionar()"title="Clique">adicionar</button>
+    <button id="remover" onclick="remover()">Remover</button>
+    <script>
+        function adicionar() {
+            var texto = prompt("Digite um produto")
+            var ul = document.getElementById("grupo");
+            var li = document.createElement("li");
+            li.className = "item";
+
+            li.appendChild(document.createTextNode(texto));
+            ul.appendChild(li);
+            
+        }
+        function remover() {
+            var ul = document.getElementById("grupo")
+            ul.innerHTML = "";
+            ul.length = 0;
+            
+            
+            
+        }
+    </script>
+</body>
+</html>
